@@ -6,11 +6,12 @@
     list-style: none;
     scroll-behavior: smooth;
     text-decoration: none;
+    font-family: 'Poppis' sans-serif;
 }
 :root{
     --text-color:#f5f5f5;
     --hover-color:#12f7ff;
-    --bg-color:#250821;
+    --bg-color:Black;
     --secon-bg-color:#292e33;
     --big-font:2.5rem;
     --norma-font:2rem;
@@ -358,11 +359,12 @@ a.btn:nth-child(2)::before{
 
 /* About Section CSS */
 .about{
+  
     display: flex;
     justify-content: center;
     align-items: center;
     grid-gap: 2em;
-    background: var(--secon-bg-color);
+    /* background: var(--secon-bg-color); */
 }
 
 .about .img-about{
@@ -448,6 +450,7 @@ a.btn:nth-child(2)::before{
 }
 
 .main-text h2{
+  /* margin-left: 10px; */
     font-weight: 700;
     font-size: var(--norma-font);
 }
@@ -517,7 +520,7 @@ a.btn:nth-child(2)::before{
 /* SkillsSection */
 /* SkillsSection */
 .skills {
-    background: var(--secon-bg-color);
+    /* background: var(--secon-bg-color); */
     padding: 50px;
   }
   
@@ -774,7 +777,7 @@ a.btn:nth-child(2)::before{
 
 /* Conatct Section CSS */
 .contact{
-    background: var(--bg-color);
+    /* background: var(--bg-color); */
 
 }
 
@@ -814,7 +817,7 @@ textarea {
 }
 
 button {
-    width: 100%;
+    width: 80%;
     align-items: center;
     padding: 10px;
     background-color: red;
@@ -824,7 +827,7 @@ button {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-left: 120px ;
+    margin-left: 0px ;
 }
 
 button:hover {
@@ -1051,6 +1054,7 @@ footer a i{
   
 
   /* BreakPoints */
+ 
 @media(max-width:991px){
   header,
   header.sticky{
@@ -1059,9 +1063,11 @@ footer a i{
   footer{
     padding: 15px 5%;
   }
+  
   section{
     padding: 50px 5%;
   }
+ 
   .navlist a{
     padding: 8px 15px;
   }
@@ -1076,16 +1082,19 @@ footer a i{
     margin-top: 5rem;
 
   }
+  
   .social-icons{
     margin-top: 2rem;
   }
+  
 }
+
 @media(max-width: 768px) {
   #menu-icon {
     display: block;
     transition: all .4s ease;
   }
-
+ 
   #menu-icon.bx-x {
     transform: rotate(-180deg);
   }
@@ -1117,7 +1126,7 @@ footer a i{
   }  
   .home-image{
     margin-bottom: 5rem;
-    margin-left: 0px;
+   
   }
   .liquid-shape{
     width: 80%;
@@ -1127,6 +1136,30 @@ footer a i{
   .about{
     flex-direction: column-reverse;
   }
+
+  .about {
+       /* Stacks content vertically */
+        justify-content: center; /* Ensures center alignment */
+        align-items: center; /* Vertically centers content */
+        width: 100%; /* Full width on mobile */
+        padding: 20px; /* Adjust padding for mobile view */
+    }
+
+    .about img {
+        width: 100%; /* Makes image responsive */
+        margin-bottom: 20px; /* Adds space below image */
+    }
+
+    .about-content {
+        text-align: center; /* Centers text content */
+        width: 100%; /* Ensure the content takes up full width */
+    }
+    .skills{
+      justify-content: center; /* Ensures center alignment */
+      align-items: center; /* Vertically centers content */
+      width: 100%; /* Full width on mobile */
+      padding: 20px; 
+    }
   .skill-main{
  grid-template-columns: 1fr;
   }
@@ -1137,25 +1170,145 @@ footer a i{
     font-size: .8rem;
   }
 }
-@media(max-width: 420px) {
-  html{
-    font-size: 80%;
-  }
-  footer p{
-    font-size: .6rem;
-  }
-  .fillter-buttons .btn{
-    font-size: .8rem;
-  }
-  .img-about img{
-    width: 300px;
-  }
-  .info-about1,.info-about2,.info-about3{
-    display: none;
-  }
-  .img-about p{
-    font-size: 1rem;
 
+@media (max-width: 500px) {
+  .about {
+     /* Adjust padding for smaller screens */
+      margin: 0 auto;
+      margin-left: 50px; /* Center the section */
   }
+
+  .img-about img {
+      width: 100%; /* Adjust the width of images */
+      margin-bottom: 0;
+  }
+
+  .info-about1, .info-about2, .info-about3 {
+      display: none; /* Hide unnecessary elements for mobile */
+  }
+
+  .about p, .about h1, .about h2 {
+      text-align: center; /* Ensure all text is centered */
+      margin: 0 auto;
+  }
+  .section-services{
+   width: 100%;
+   margin-left: 50px;  }
+  .skills{
+    width: 100%;
+    margin-left: 50px;  }
+ .portfolio{
+  width: 100%;
+  margin-left: 50px; }
+ .contact{
+  width: 100%;
+  margin-left: 50px; }
+}
+
+
+
+
+
+@media (max-width: 450px) {
+  .about {
+     /* Adjust padding for smaller screens */
+      margin: 0 auto;
+      margin-left: 50px;  }
+
+  .img-about img {
+      width: 100%; /* Adjust the width of images */
+      margin-bottom: 0;
+  }
+
+  .info-about1, .info-about2, .info-about3 {
+      display: none; /* Hide unnecessary elements for mobile */
+  }
+
+  .about p, .about h1, .about h2 {
+      text-align: center; /* Ensure all text is centered */
+      margin: 0 auto;
+  }
+  .section-services{
+   width: 100%;
+   margin-left: 50px;  }
+  .skills{
+    width: 100%;
+    margin-left: 50px;  }
+ .portfolio{
+  width: 100%;
+  margin-left: 50px; }
+ .contact{
+  width: 100%;
+  margin-left: 50px; }
+}
+
   
+  
+@media (max-width: 400px) {
+  .about {
+     /* Adjust padding for smaller screens */
+      margin: 0 auto;
+      margin-left: 50px;  }
+
+  .img-about img {
+      width: 100%; /* Adjust the width of images */
+      margin-bottom: 0;
+  }
+
+  .info-about1, .info-about2, .info-about3 {
+      display: none; /* Hide unnecessary elements for mobile */
+  }
+
+  .about p, .about h1, .about h2 {
+      text-align: center; /* Ensure all text is centered */
+      margin: 0 auto;
+  }
+  .section-services{
+   width: 100%;
+   margin-left: 50px;  }
+  .skills{
+    width: 100%;
+    margin-left: 40px;
+  }
+ .portfolio{
+  width: 100%;
+  margin-left: 50px;  }
+ .contact{
+  width: 100%;
+  margin-left: 50px;  }
+}
+
+
+
+@media (max-width:360px) {
+  .about {
+     /* Adjust padding for smaller screens */
+      margin: 0 auto;
+      margin-left: 50px;   }
+
+  .img-about img {
+      width: 100%; /* Adjust the width of images */
+      margin-bottom: 0;
+  }
+
+  .info-about1, .info-about2, .info-about3 {
+      display: none; /* Hide unnecessary elements for mobile */
+  }
+
+  .about p, .about h1, .about h2 {
+      text-align: center; /* Ensure all text is centered */
+      margin: 0 auto;
+  }
+  .section-services{
+   width: 100%;
+   margin-left: 50px;   }
+  .skills{
+    width: 100%;
+    margin-left: 50px;   }
+ .portfolio{
+  width: 100%;
+  margin-left: 50px;  }
+ .contact{
+  width: 100%;
+  margin-left: 50px;  }
 }
